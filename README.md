@@ -7,8 +7,11 @@
   - vector_table.txt: table of memory addressses containing ISR locations for each IO device.
   - analyze_result.py: matplotlib script to plot gantt chart
 
+# Supported Platforms:
+  - x86-64 based Linux
+
 # Build dependencies:
-  - gcc/g++ x86_64
+  - gcc/g++ 
 
 # Result analysis dependencies:
   - python3+
