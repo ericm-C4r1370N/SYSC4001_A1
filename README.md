@@ -2,6 +2,8 @@
 
 
 # Contents:
+  - interrupts.cpp: CPU simulation program
+  - interrupts.hpp: helper functions for simulator
   - trace.txt: program execution trace
   - device_table.txt: table of hardcoded IO times for corresponding device #'s
   - vector_table.txt: table of memory addressses containing ISR locations for each IO device.
