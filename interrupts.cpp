@@ -47,7 +47,7 @@ for (int i = 0; i < 100; i++) {
             execution += std::to_string(exec_time) + ", " + std::to_string(syscall_time) + ", user program makes a system call\n";
             exec_time++;
 
-            // Use the boilerplate for the initial interrupt overhead
+            // Use the function provided in interrupts.hpp for the initial interrupt overhead
             auto [intr_exec, intr_time] = intr_boilerplate(exec_time, duration_intr, change_context_time, vectors);
             execution += intr_exec;
             exec_time = intr_time;
@@ -64,7 +64,7 @@ for (int i = 0; i < 100; i++) {
             // Read the file line by line
             while (std::getline(file, line)) {
             current_line++;
-                // Check if we have reached the desired line number
+                // Check if we have reached the desired line number (device number)
                 if (current_line == device_num) {
                     IO_wait = std::stoi(line);
                 }
@@ -84,7 +84,7 @@ for (int i = 0; i < 100; i++) {
         } else if (activity == "END_IO") {
             int device_num = duration_intr;
             
-            // Since we assume IO finishes, this is where the interrupt occurs
+            // Since we assume IO always finishes, this is where the interrupt occurs
             auto [intr_exec, intr_time] = intr_boilerplate(exec_time, device_num, change_context_time, vectors);
             execution += intr_exec;
             exec_time = intr_time;
