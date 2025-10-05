@@ -3,8 +3,8 @@
 
 # Contents:
   - trace.txt: program execution trace
-  - device_table.txt: list of IO times for corresponding device #'s
-  - vector_table.txt: list of memory addressses contain ISR locations.
+  - device_table.txt: table of hardcoded IO times for corresponding device #'s
+  - vector_table.txt: table of memory addressses containing ISR locations for each IO device.
   - analyze_result.py: matplotlib script to plot gantt chart
 
 # Build dependencies:
