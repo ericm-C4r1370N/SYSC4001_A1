@@ -1,18 +1,20 @@
 # SYSC4001_A1
 
-Contents:
+
+# Contents:
   - trace.txt: program execution trace
   - device_table.txt: list of IO times for corresponding device #'s
   - vector_table.txt: list of memory addressses contain ISR locations.
   - analyze_result.py: matplotlib script to plot gantt chart
 
-Build dependencies:
+# Build dependencies:
   - gcc/g++ x86_64
-Result analysis dependencies:
+
+# Result analysis dependencies:
   - python3+
   - matplotlib
 
-Usage (scripted):
+# Usage (scripted):
   - clone repo
   - cd into repo
   - run "source build.sh"
@@ -20,7 +22,7 @@ Usage (scripted):
   - program will execute and output to ./execution.txt
   - python script will run on execution.txt and display results in a gantt chart of simulation results
 
-Usage (manual):
+# Usage (manual):
   - clone repo
   - cd into repo
   - compile interrupts.cpp with interrupts.hpp using your preferred compiler
